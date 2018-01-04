@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.1" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="adventure.AdventureGame" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/AdventureGame.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="221" width="186" x="1494" y="532"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" language="java" name="adventure.Chooseable" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/Chooseable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="77" width="123" x="2089" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="3" language="java" name="adventure.Chooser" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/Chooser.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="95" width="137" x="392" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="adventure.DungeonMain" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/DungeonMain.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="95" width="114" x="569" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" language="java" name="adventure.actions.Action" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/actions/Action.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="131" width="153" x="2710" y="1712"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="6" language="java" name="adventure.actions.Attack" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/actions/Attack.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="167" width="153" x="3024" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="adventure.actions.Look" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/actions/Look.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="167" width="153" x="2252" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="adventure.actions.Move" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/actions/Move.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="167" width="153" x="2638" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="adventure.actions.Rest" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/actions/Rest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="167" width="153" x="2445" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="adventure.actions.Use" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/actions/Use.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="167" width="153" x="2831" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="adventure.entities.GameCharacter" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/entities/GameCharacter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="455" width="266" x="1701" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="adventure.entities.Monster" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/entities/Monster.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="149" width="258" x="1701" y="1172"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="adventure.entities.Player" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/entities/Player.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="167" width="263" x="1741" y="793"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="adventure.entities.monsterfactory.BokoblinFactory" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/entities/monsterfactory/BokoblinFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="95" width="228" x="2007" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="adventure.entities.monsterfactory.DragonFactory" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/entities/monsterfactory/DragonFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="95" width="228" x="2275" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="adventure.entities.monsterfactory.MarsianFactory" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/entities/monsterfactory/MarsianFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="113" width="242" x="2811" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="adventure.entities.monsterfactory.MedusaFactory" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/entities/monsterfactory/MedusaFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="95" width="228" x="3093" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="18" language="java" name="adventure.entities.monsterfactory.MonsterFactory" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/entities/monsterfactory/MonsterFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="77" width="228" x="2543" y="532"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="19" language="java" name="adventure.entities.monsterfactory.WitchFactory" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/entities/monsterfactory/WitchFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="95" width="228" x="2543" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="adventure.entities.monsters.Bokoblin" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/entities/monsters/Bokoblin.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="77" width="155" x="1506" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="adventure.entities.monsters.Dragon" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/entities/monsters/Dragon.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="77" width="150" x="1316" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="adventure.entities.monsters.Marsian" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/entities/monsters/Marsian.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="95" width="167" x="1882" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="adventure.entities.monsters.Medusa" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/entities/monsters/Medusa.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="77" width="153" x="1123" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="adventure.entities.monsters.Witch" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/entities/monsters/Witch.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="77" width="141" x="1701" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="adventure.helpers.Display" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/helpers/Display.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="185" width="155" x="197" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="adventure.helpers.ScannerInt" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/helpers/ScannerInt.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="113" width="113" x="44" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="27" language="java" name="adventure.items.Item" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/items/Item.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="95" width="123" x="739" y="1712"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="28" language="java" name="adventure.items.InsufficientGoldException" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/items/InsufficientGoldException.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="77" width="185" x="1251" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="adventure.items.LifePotion" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/items/LifePotion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="149" width="123" x="392" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="adventure.items.OneArmedBandit" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/items/OneArmedBandit.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="203" width="181" x="739" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="adventure.items.StrengthPotion" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/items/StrengthPotion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="149" width="123" x="960" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="adventure.items.GoldPurse" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/items/GoldPurse.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="149" width="123" x="576" y="1469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="33" language="java" name="adventure.items.itemfactory.ItemFactory" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/items/itemfactory/ItemFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="77" width="127" x="890" y="532"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="34" language="java" name="adventure.items.itemfactory.GoldPurseFactory" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/items/itemfactory/GoldPurseFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="95" width="128" x="1083" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="adventure.items.itemfactory.LifePotionFactory" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/items/itemfactory/LifePotionFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="95" width="127" x="723" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="adventure.items.itemfactory.StrengthPotionFactory" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/items/itemfactory/StrengthPotionFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="95" width="153" x="890" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="37" language="java" name="adventure.rooms.Direction" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/rooms/Direction.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="257" width="164" x="2089" y="1172"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="38" language="java" name="adventure.rooms.Room" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/rooms/Room.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="329" width="235" x="1067" y="793"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="adventure.rooms.RoomFactory" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/rooms/RoomFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="95" width="185" x="1476" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="adventure.rooms.ExitRoom" project="COO-dungeon" 
+    file="/COO-dungeon/src/main/java/adventure/rooms/ExitRoom.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="95" width="140" x="1067" y="1172"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="41">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <association id="42">    
+    <bendpoint x="3207" y="1172"/>    
+    <bendpoint x="3207" y="1469"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="43" name="possibleActions"/>      
+      <multiplicity id="44" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="45">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <realization id="46">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="47">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="48" name="theMonsters"/>      
+      <multiplicity id="49" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="50">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="51" name="theNeighbours"/>      
+      <multiplicity id="52" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="53">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="54">    
+    <bendpoint x="545" y="1172"/>    
+    <bendpoint x="545" y="1469"/>    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="55" name="theItems"/>      
+      <multiplicity id="56" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="57">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <generalization id="58">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="59">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <realization id="60">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <generalization id="61">    
+    <bendpoint x="1731" y="532"/>    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <generalization id="62">    
+    <bendpoint x="1710" y="793"/>    
+    <bendpoint x="1710" y="532"/>    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <realization id="63">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <association id="64">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="65" name="currentRoom"/>      
+      <multiplicity id="66" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="67">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <generalization id="68">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="38"/>  
+  </generalization>  
+  <generalization id="69">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <realization id="70">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <realization id="71">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <realization id="72">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <realization id="73">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="27"/>  
+  </realization>  
+  <realization id="74">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <generalization id="75">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="76">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="77">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="78" name="game"/>      
+      <multiplicity id="79" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="80">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <realization id="81">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <realization id="82">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="83">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="27"/>  
+  </realization>  
+  <association id="84">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="85" name="possibleItems"/>      
+      <multiplicity id="86" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="87">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="27"/>  
+  </realization>  
+  <realization id="88">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="27"/>  
+  </realization>  
+  <generalization id="89">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <realization id="90">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <association id="91">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="92" name="player"/>      
+      <multiplicity id="93" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
