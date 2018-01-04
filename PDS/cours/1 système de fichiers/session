@@ -1,0 +1,577 @@
+Cette session a été enregistrée avec la commande script dans un
+fichier « typescript », puis nettoyée en faisant « cat typescript » et
+en copiant le résultat dans ce fichier.
+
+
+Le script a débuté sur ven. 08 sept. 2017 14:12:47 CEST
+
+[0]
+14:13 ~/e/pds/1 système de fichiers (cours u+3)
+$ cd /tmp/exemple/
+
+[0]
+14:13 /tmp/exemple
+$ ls
+
+[0]
+14:13 /tmp/exemple
+$ mkdir a
+
+[0]
+14:13 /tmp/exemple
+$ touch a/b
+
+[0]
+14:13 /tmp/exemple
+$ vim a/b
+
+[0]
+14:13 /tmp/exemple
+$ ls -al
+total 12
+drwxr-xr-x  3 hym  hym  4096 sept.  8 14:13 .
+drwxrwxrwt 15 root root 4096 sept.  8 14:13 ..
+drwxr-xr-x  2 hym  hym  4096 sept.  8 14:13 a
+
+[0]
+14:13 /tmp/exemple
+$ chmod -w a
+
+[0]
+14:13 /tmp/exemple
+$ rm a/b
+rm: impossible de supprimer 'a/b': Permission non accordée
+
+[1]
+14:13 /tmp/exemple
+$ cat a/b
+contenu
+
+
+[0]
+14:14 /tmp/exemple
+$ vim a/b
+
+[0]
+14:14 /tmp/exemple
+$ ls -l a/b
+-rw-r--r-- 1 hym hym 12 sept.  8 14:14 a/b
+
+[0]
+14:14 /tmp/exemple
+$ chmod -r a
+
+[0]
+14:15 /tmp/exemple
+$ ls -l a
+ls: impossible d'ouvrir le répertoire 'a': Permission non accordée
+
+[2]
+14:15 /tmp/exemple
+$ vim a/b
+
+[0 23s]
+14:15 /tmp/exemple
+$ chmod -x a
+
+[0]
+14:15 /tmp/exemple
+$ vim a/b
+
+[0]
+14:16 /tmp/exemple
+$ chmod +r a
+
+[0]
+14:16 /tmp/exemple
+$ ls -l
+total 4
+dr--r--r-- 2 hym hym 4096 sept.  8 14:13 a
+
+[0]
+14:16 /tmp/exemple
+$ ls -l a
+ls: impossible d'accéder à 'a/b': Permission non accordée
+total 0
+-????????? ? ? ? ?              ? b
+
+[1]
+14:16 /tmp/exemple
+$ stat a/b
+stat: impossible d'évaluer 'a/b': Permission non accordée
+
+[1]
+14:17 /tmp/exemple
+$ vim a/b
+
+[0]
+14:39 /tmp/exemple
+$ cd /tmp/
+
+[0]
+14:39 /tmp
+$ l
+exemple/
+
+[0]
+14:39 /tmp
+$ ln -s /tmp ln
+
+[0]
+14:39 /tmp
+$ ls -l
+total 36
+drwxr-xr-x 3 hym  hym  4096 sept.  8 14:13 exemple
+lrwxrwxrwx 1 hym  hym     4 sept.  8 14:39 ln -> /tmp
+
+[0]
+14:39 /tmp
+$ cd ln
+/tmp/ln
+
+[0]
+14:40 /tmp/ln
+$ ls -l
+total 36
+drwxr-xr-x 3 hym  hym  4096 sept.  8 14:13 exemple
+lrwxrwxrwx 1 hym  hym     4 sept.  8 14:39 ln -> /tmp
+
+[0]
+14:40 /tmp/ln
+$ cd ln/
+/tmp/ln/ln
+
+[0]
+14:40 /tmp/ln/ln
+$ cd ln/
+/tmp/ln/ln/ln
+
+[0]
+14:40 /tmp/ln/ln/ln
+$ cd ln/
+/tmp/ln/ln/ln/ln
+
+[0]
+14:40 /tmp/ln/ln/ln/ln
+$ ls -l
+total 36
+drwxr-xr-x 3 hym  hym  4096 sept.  8 14:13 exemple
+lrwxrwxrwx 1 hym  hym     4 sept.  8 14:39 ln -> /tmp
+
+[0]
+14:40 /tmp/ln/ln/ln/ln
+$ cd /tmp/
+
+[0]
+14:41 /tmp
+$ ln -s piege piege
+
+[0]
+14:41 /tmp
+$ ls -l
+total 36
+drwxr-xr-x 3 hym  hym  4096 sept.  8 14:13 exemple
+lrwxrwxrwx 1 hym  hym     4 sept.  8 14:39 ln -> /tmp
+lrwxrwxrwx 1 hym  hym     5 sept.  8 14:41 piege -> piege
+
+[0]
+14:41 /tmp
+$ cd piege
+bash: cd: piege: Trop de niveaux de liens symboliques
+
+[1]
+14:41 /tmp
+$ ln -s inexis tant
+
+[0]
+14:42 /tmp
+$ ls -l
+total 36
+drwxr-xr-x  3 hym  hym  4096 sept.  8 14:13 exemple
+lrwxrwxrwx  1 hym  hym     4 sept.  8 14:39 ln -> /tmp
+lrwxrwxrwx  1 hym  hym     5 sept.  8 14:41 piege -> piege
+lrwxrwxrwx  1 hym  hym     6 sept.  8 14:42 tant -> inexis
+
+[0]
+14:42 /tmp
+$ cd tant
+bash: cd: tant: Aucun fichier ou dossier de ce type
+
+[1]
+14:42 /tmp
+$ readlink piege
+piege
+
+[0]
+14:43 /tmp
+$ readlink tant
+inexis
+
+[0]
+14:43 /tmp
+$ for (( i = 100; i < 200; i ++)); do ln -s $i $((i + 1)); done
+
+[0]
+14:43 /tmp
+$ ls -l ???
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 101 -> 100
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 102 -> 101
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 103 -> 102
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 104 -> 103
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 105 -> 104
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 106 -> 105
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 107 -> 106
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 108 -> 107
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 109 -> 108
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 110 -> 109
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 111 -> 110
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 112 -> 111
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 113 -> 112
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 114 -> 113
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 115 -> 114
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 116 -> 115
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 117 -> 116
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 118 -> 117
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 119 -> 118
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 120 -> 119
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 121 -> 120
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 122 -> 121
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 123 -> 122
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 124 -> 123
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 125 -> 124
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 126 -> 125
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 127 -> 126
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 128 -> 127
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 129 -> 128
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 130 -> 129
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 131 -> 130
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 132 -> 131
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 133 -> 132
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 134 -> 133
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 135 -> 134
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 136 -> 135
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 137 -> 136
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 138 -> 137
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 139 -> 138
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 140 -> 139
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 141 -> 140
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 142 -> 141
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 143 -> 142
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 144 -> 143
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 145 -> 144
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 146 -> 145
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 147 -> 146
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 148 -> 147
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 149 -> 148
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 150 -> 149
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 151 -> 150
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 152 -> 151
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 153 -> 152
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 154 -> 153
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 155 -> 154
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 156 -> 155
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 157 -> 156
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 158 -> 157
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 159 -> 158
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 160 -> 159
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 161 -> 160
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 162 -> 161
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 163 -> 162
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 164 -> 163
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 165 -> 164
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 166 -> 165
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 167 -> 166
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 168 -> 167
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 169 -> 168
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 170 -> 169
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 171 -> 170
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 172 -> 171
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 173 -> 172
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 174 -> 173
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 175 -> 174
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 176 -> 175
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 177 -> 176
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 178 -> 177
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 179 -> 178
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 180 -> 179
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 181 -> 180
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 182 -> 181
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 183 -> 182
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 184 -> 183
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 185 -> 184
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 186 -> 185
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 187 -> 186
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 188 -> 187
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 189 -> 188
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 190 -> 189
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 191 -> 190
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 192 -> 191
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 193 -> 192
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 194 -> 193
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 195 -> 194
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 196 -> 195
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 197 -> 196
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 198 -> 197
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 199 -> 198
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 200 -> 199
+
+[0]
+14:43 /tmp
+$ touch 100
+
+[0]
+14:44 /tmp
+$ ls -l ???
+-rw-r--r-- 1 hym hym    0 sept.  8 14:44 100
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 101 -> 100
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 102 -> 101
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 103 -> 102
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 104 -> 103
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 105 -> 104
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 106 -> 105
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 107 -> 106
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 108 -> 107
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 109 -> 108
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 110 -> 109
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 111 -> 110
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 112 -> 111
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 113 -> 112
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 114 -> 113
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 115 -> 114
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 116 -> 115
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 117 -> 116
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 118 -> 117
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 119 -> 118
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 120 -> 119
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 121 -> 120
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 122 -> 121
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 123 -> 122
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 124 -> 123
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 125 -> 124
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 126 -> 125
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 127 -> 126
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 128 -> 127
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 129 -> 128
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 130 -> 129
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 131 -> 130
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 132 -> 131
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 133 -> 132
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 134 -> 133
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 135 -> 134
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 136 -> 135
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 137 -> 136
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 138 -> 137
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 139 -> 138
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 140 -> 139
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 141 -> 140
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 142 -> 141
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 143 -> 142
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 144 -> 143
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 145 -> 144
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 146 -> 145
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 147 -> 146
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 148 -> 147
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 149 -> 148
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 150 -> 149
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 151 -> 150
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 152 -> 151
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 153 -> 152
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 154 -> 153
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 155 -> 154
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 156 -> 155
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 157 -> 156
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 158 -> 157
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 159 -> 158
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 160 -> 159
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 161 -> 160
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 162 -> 161
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 163 -> 162
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 164 -> 163
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 165 -> 164
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 166 -> 165
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 167 -> 166
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 168 -> 167
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 169 -> 168
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 170 -> 169
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 171 -> 170
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 172 -> 171
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 173 -> 172
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 174 -> 173
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 175 -> 174
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 176 -> 175
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 177 -> 176
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 178 -> 177
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 179 -> 178
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 180 -> 179
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 181 -> 180
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 182 -> 181
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 183 -> 182
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 184 -> 183
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 185 -> 184
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 186 -> 185
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 187 -> 186
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 188 -> 187
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 189 -> 188
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 190 -> 189
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 191 -> 190
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 192 -> 191
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 193 -> 192
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 194 -> 193
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 195 -> 194
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 196 -> 195
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 197 -> 196
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 198 -> 197
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 199 -> 198
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 200 -> 199
+
+[0]
+14:44 /tmp
+$ cat 142
+cat: 142: Trop de niveaux de liens symboliques
+
+[1]
+14:44 /tmp
+$ cat 141
+cat: 141: Trop de niveaux de liens symboliques
+
+[1]
+14:45 /tmp
+$ cat 140
+
+[0]
+14:45 /tmp
+$ rm 141
+
+[0]
+14:46 /tmp
+$ touch 141
+
+[0]
+14:46 /tmp
+$ ls -l ???
+-rw-r--r-- 1 hym hym    0 sept.  8 14:44 100
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 101 -> 100
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 102 -> 101
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 103 -> 102
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 104 -> 103
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 105 -> 104
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 106 -> 105
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 107 -> 106
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 108 -> 107
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 109 -> 108
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 110 -> 109
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 111 -> 110
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 112 -> 111
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 113 -> 112
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 114 -> 113
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 115 -> 114
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 116 -> 115
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 117 -> 116
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 118 -> 117
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 119 -> 118
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 120 -> 119
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 121 -> 120
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 122 -> 121
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 123 -> 122
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 124 -> 123
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 125 -> 124
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 126 -> 125
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 127 -> 126
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 128 -> 127
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 129 -> 128
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 130 -> 129
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 131 -> 130
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 132 -> 131
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 133 -> 132
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 134 -> 133
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 135 -> 134
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 136 -> 135
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 137 -> 136
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 138 -> 137
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 139 -> 138
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 140 -> 139
+-rw-r--r-- 1 hym hym    0 sept.  8 14:46 141
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 142 -> 141
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 143 -> 142
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 144 -> 143
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 145 -> 144
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 146 -> 145
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 147 -> 146
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 148 -> 147
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 149 -> 148
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 150 -> 149
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 151 -> 150
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 152 -> 151
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 153 -> 152
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 154 -> 153
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 155 -> 154
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 156 -> 155
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 157 -> 156
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 158 -> 157
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 159 -> 158
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 160 -> 159
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 161 -> 160
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 162 -> 161
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 163 -> 162
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 164 -> 163
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 165 -> 164
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 166 -> 165
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 167 -> 166
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 168 -> 167
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 169 -> 168
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 170 -> 169
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 171 -> 170
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 172 -> 171
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 173 -> 172
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 174 -> 173
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 175 -> 174
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 176 -> 175
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 177 -> 176
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 178 -> 177
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 179 -> 178
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 180 -> 179
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 181 -> 180
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 182 -> 181
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 183 -> 182
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 184 -> 183
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 185 -> 184
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 186 -> 185
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 187 -> 186
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 188 -> 187
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 189 -> 188
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 190 -> 189
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 191 -> 190
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 192 -> 191
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 193 -> 192
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 194 -> 193
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 195 -> 194
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 196 -> 195
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 197 -> 196
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 198 -> 197
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 199 -> 198
+lrwxrwxrwx 1 hym hym    3 sept.  8 14:43 200 -> 199
+
+[0]
+14:46 /tmp
+$ ls -l /bin/sh
+lrwxrwxrwx 1 root root 4 juin  28 18:26 /bin/sh -> dash
+
+[0]
+14:48 /tmp
+$ ll /bin/bash
+-rwxr-xr-x 1 root root 1,1M mai   15 21:45 /bin/bash*
+
+[0]
+14:49 /tmp
+$ ll /bin/dash
+-rwxr-xr-x 1 root root 115K juin  28 18:26 /bin/dash*
+
+[0]
+14:49 /tmp
+$ ls /etc/alternatives/
+... (plein de choses) ...
+
+[0]
+14:51 /tmp
+$ ll /lib/x86_64-linux-gnu/libc.so.6
+lrwxrwxrwx 1 root root 12 août  26 11:09 /lib/x86_64-linux-gnu/libc.so.6 -> libc-2.24.so*

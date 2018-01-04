@@ -1,0 +1,5 @@
+#   Exemple d’arborescence typique
+
+Pour en savoir plus, lire la documentation du
+[Filesystem Hierarchy Standard](http://www.pathname.com/fhs/)
+et la page de manuel hier(7).

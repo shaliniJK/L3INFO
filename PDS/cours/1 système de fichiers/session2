@@ -1,0 +1,124 @@
+Cette session a été enregistrée avec la commande script dans un
+fichier « typescript », puis nettoyée en faisant « cat typescript » et
+en copiant le résultat dans ce fichier.
+
+
+Le script a débuté sur mar. 12 sept. 2017 14:46:33 CEST
+
+[0]
+14:46 /tmp/a
+$ touch fichiertmp
+
+[0]
+14:46 /tmp/a
+$ ln fichiertmp physique
+
+[0]
+14:46 /tmp/a
+$ ln -s fichiertmp symbolique
+
+[0]
+14:46 /tmp/a
+$ ls -l
+total 0
+-rw-r--r-- 2 hym hym  0 sept. 12 14:46 fichiertmp
+-rw-r--r-- 2 hym hym  0 sept. 12 14:46 physique
+lrwxrwxrwx 1 hym hym 10 sept. 12 14:46 symbolique -> fichiertmp
+-rw-r--r-- 1 hym hym  0 sept. 12 14:46 typescript
+
+[0]
+14:46 /tmp/a
+$ ln random physique2
+ln: impossible d'accéder à 'random': Aucun fichier ou dossier de ce type
+
+[1]
+14:47 /tmp/a
+$ ln -s random symbolique2
+
+[0]
+14:48 /tmp/a
+$ ls -l
+total 0
+-rw-r--r-- 2 hym hym  0 sept. 12 14:46 fichiertmp
+-rw-r--r-- 2 hym hym  0 sept. 12 14:46 physique
+lrwxrwxrwx 1 hym hym 10 sept. 12 14:46 symbolique -> fichiertmp
+lrwxrwxrwx 1 hym hym  6 sept. 12 14:48 symbolique2 -> random
+-rw-r--r-- 1 hym hym  0 sept. 12 14:46 typescript
+
+[0]
+14:48 /tmp/a
+$ mkdir sousrep
+
+[0]
+14:48 /tmp/a
+$ mv physique sousrep/
+
+[0]
+14:48 /tmp/a
+$ mv symbolique sousrep/
+
+[0]
+14:49 /tmp/a
+$ cd sousrep/
+
+[0]
+14:49 /tmp/a/sousrep
+$ ls -l
+total 0
+-rw-r--r-- 2 hym hym  0 sept. 12 14:46 physique
+lrwxrwxrwx 1 hym hym 10 sept. 12 14:46 symbolique -> fichiertmp
+
+[0]
+14:49 /tmp/a/sousrep
+$ mv ../fichiertmp .
+
+[0]
+14:50 /tmp/a/sousrep
+$ ls -al
+total 8
+drwxr-xr-x 2 hym hym 4096 sept. 12 14:50 .
+drwxr-xr-x 3 hym hym 4096 sept. 12 14:50 ..
+-rw-r--r-- 2 hym hym    0 sept. 12 14:46 fichiertmp
+-rw-r--r-- 2 hym hym    0 sept. 12 14:46 physique
+lrwxrwxrwx 1 hym hym   10 sept. 12 14:46 symbolique -> fichiertmp
+
+[0]
+14:50 /tmp/a/sousrep
+$ mv fichiertmp ..
+
+[0]
+14:50 /tmp/a/sousrep
+$ echo b > fichiertmp
+
+[0]
+14:50 /tmp/a/sousrep
+$ cd ..
+
+[0]
+14:50 /tmp/a
+$ tree
+.
+├── fichiertmp
+├── sousrep
+│   ├── fichiertmp
+│   ├── physique
+│   └── symbolique -> fichiertmp
+├── symbolique2 -> random
+└── typescript
+
+1 directory, 6 files
+
+[0]
+14:50 /tmp/a
+$ cd sousrep/
+
+[0]
+14:51 /tmp/a/sousrep
+$ cat physique
+
+[0]
+14:51 /tmp/a/sousrep
+$ cat symbolique
+b
+
+Script terminé sur mar. 12 sept. 2017 14:52:18 CEST
